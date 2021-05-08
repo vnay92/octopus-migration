@@ -37,8 +37,21 @@ table! {
     }
 }
 
+table! {
+    user_emails (id) {
+        id -> Varchar,
+        user_id -> Varchar,
+        email -> Varchar,
+        is_active -> Nullable<Bool>,
+        created_at -> Nullable<Bigint>,
+        deleted_at -> Nullable<Bigint>,
+        updated_at -> Nullable<Bigint>,
+    }
+}
+
 allow_tables_to_appear_in_same_query!(
     mails,
     mail_attachments,
     users,
+    user_emails,
 );

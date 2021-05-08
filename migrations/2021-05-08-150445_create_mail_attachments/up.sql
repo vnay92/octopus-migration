@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `mail_attachments` (
     `content-type` TEXT NOT NULL,
     `created_at` BIGINT,
     `updated_at` BIGINT NULL DEFAULT NULL
-)
+);

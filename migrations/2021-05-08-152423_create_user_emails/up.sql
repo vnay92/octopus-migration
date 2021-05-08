@@ -1,11 +1,11 @@
 -- Your SQL goes here
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE IF NOT EXISTS `user_emails` (
     `id` VARCHAR(20) NOT NULL UNIQUE PRIMARY KEY,
-    `name` VARCHAR(255) NOT NULL,
+    `user_id` VARCHAR(20) NOT NULL,
     `email` VARCHAR(255) NOT NULL,
-    `password` TEXT NOT NULL,
-    `is_active` TINYINT DEFAULT 1,
+    `is_active` BOOLEAN,
     `created_at` BIGINT,
+    `deleted_at` BIGINT NULL DEFAULT NULL,
     `updated_at` BIGINT NULL DEFAULT NULL
 );
